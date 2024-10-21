@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Motivation App</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f0f4f8;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            text-align: center;
+            padding: 20px;
+            background-color: #ffffff;
+            border-radius: 15px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+            color: #4A90E2;
+        }
+
+        p {
+            font-size: 1.5rem;
+            line-height: 1.5;
+            margin-bottom: 30px;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 1rem;
+            background-color: #4A90E2;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #357ABD;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Motivational Quotes</h1>
+        <p id="quote">"You are braver than you believe, stronger than you seem, and smarter than you think."</p>
+        <button onclick="newQuote()">Get a new quote</button>
+    </div>
+
+    <script>
+        const quotes = [
+            "Believe you can and you're halfway there.",
+            "Your present circumstances don’t determine where you can go; they merely determine where you start.",
+            "The only disability in life is a bad attitude.",
+            "You are not your disability. You are capable of achieving anything you set your mind to.",
+            "Strength doesn’t come from what you can do. It comes from overcoming the things you once thought you couldn’t.",
+            "Success is not final, failure is not fatal: It is the courage to continue that counts.",
+            "Your limitations are only in your mind. Break free and embrace your strength.",
+            "Disability is not a barrier to success, but a motivation to rise above and inspire.",
+            "One step at a time is progress, and every step you take is a victory.",
+            "Challenges are what make life interesting, overcoming them is what makes life meaningful.",
+            "Your story is not over. You are more than your struggles.",
+            "Don’t let anyone define your limits. Only you know what you are truly capable of.",
+            "You have within you right now, everything you need to overcome any obstacle.",
+            "It always seems impossible until it’s done.",
+            "Focus on what you can do, not on what you can’t, and watch your possibilities grow.",
+            "No matter how difficult today may seem, tomorrow is a new opportunity for greatness.",
+            "The strongest people are not those who show strength in front of us but those who win battles we know nothing about.",
+            "Don't be afraid of challenges. They are the stepping stones to your growth.",
+            "When life gives you a hundred reasons to break down and cry, show life you have a thousand reasons to smile.",
+            "Believe in yourself and all that you are. Know that there is something inside you that is greater than any obstacle."
+            // Add hundreds more quotes here
+        ];
+
+        function newQuote() {
+            const randomIndex = Math.floor(Math.random() * quotes.length);
+            document.getElementById("quote").textContent = quotes[randomIndex];
+        }
+    </script>
+
+</body>
+</html>
