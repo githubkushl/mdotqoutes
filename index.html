@@ -15,6 +15,11 @@
             justify-content: center;
             align-items: center;
             height: 100vh;
+            flex-direction: column; /* Updated to align items vertically */
+        }
+
+        .logo {
+            margin-top: 20px;
         }
 
         .container {
@@ -23,6 +28,7 @@
             background-color: #ffffff;
             border-radius: 15px;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            margin-top: 20px;
         }
 
         h1 {
@@ -50,12 +56,42 @@
         button:hover {
             background-color: #357ABD;
         }
+
+        .navbar {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            background-color: #4A90E2;
+            padding: 10px 0;
+            text-align: center;
+        }
+
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 20px;
+            font-size: 1rem;
+        }
+
+        .navbar a:hover {
+            background-color: #357ABD;
+            border-radius: 5px;
+        }
     </style>
 </head>
 <body>
 
+    <!-- Navbar with link to the company info page -->
+    <div class="navbar">
+        <a href="company-info.html">Company Info & Address</a>
+    </div>
+
+    <!-- Logo at the top -->
+    <img src="logo123456.png" alt="Company Logo" class="logo" width="150">
+
     <div class="container">
-        <h1>Motivational Quotes</h1>
+        <h1>Mdot Quotes</h1>
         <p id="quote">"You are braver than you believe, stronger than you seem, and smarter than you think."</p>
         <button onclick="newQuote()">Get a new quote</button>
     </div>
@@ -82,7 +118,6 @@
             "Don't be afraid of challenges. They are the stepping stones to your growth.",
             "When life gives you a hundred reasons to break down and cry, show life you have a thousand reasons to smile.",
             "Believe in yourself and all that you are. Know that there is something inside you that is greater than any obstacle."
-            // Add hundreds more quotes here
         ];
 
         function newQuote() {
